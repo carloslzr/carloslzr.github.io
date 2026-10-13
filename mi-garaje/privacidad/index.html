@@ -15,9 +15,8 @@
 
   <div class="resumen">
     <p><strong>Resumen.</strong> Mi Garaje está diseñada para que tus datos no salgan de
-    tu dispositivo. La app no tiene servidor propio, no muestra publicidad, no incluye
-    herramientas de analítica ni de seguimiento, y el desarrollador no recibe en ningún
-    momento la información que registras. Algunas funciones opcionales se conectan a
+    tu dispositivo. La app no tiene servidor propio, no muestra publicidad, no rastrea tu actividad y el desarrollador no
+    recibe en ningún momento la información que registras. Algunas funciones opcionales se conectan a
     servicios de terceros; en esta política se detalla cuáles son, qué información
     reciben y cuándo.</p>
   </div>
@@ -102,8 +101,8 @@
       <tbody>
         <tr><td data-label="Permiso">Ubicación precisa y aproximada</td><td data-label="Finalidad">Grabar rutas (con una notificación visible durante toda la grabación),
           mostrar velocidad, rumbo y tiempo en el dashboard de conducción y ordenar las
-          gasolineras por cercanía.</td><td data-label="¿Sale información del dispositivo?">Solo la posición aproximada que se envía a Open-Meteo para consultar el
-          tiempo (apartado 5). La posición la obtiene Android a través de los servicios de
+          gasolineras por cercanía.</td><td data-label="¿Sale información del dispositivo?">Solo la posición, redondeada a alrededor de 1 km, que se envía a Open-Meteo
+          para consultar el tiempo (apartado 5). La posición la obtiene Android a través de los servicios de
           ubicación de Google Play, que funcionan según la configuración de ubicación de tu
           dispositivo. La app no usa el permiso de ubicación en segundo plano.</td></tr>
         <tr><td data-label="Permiso">Servicio en primer plano de ubicación</td><td data-label="Finalidad">Que la grabación de una ruta continúe con la pantalla apagada o mientras usas
@@ -132,7 +131,8 @@
   tickets de gasolinera. El texto del ticket se reconoce en el propio dispositivo con
   ML Kit de Google, y ni la imagen ni el texto se envían a ningún servidor ni se
   conservan. ML Kit puede enviar a Google métricas técnicas de funcionamiento
-  (información del dispositivo y de la app, rendimiento y errores) para diagnóstico,
+  (información del dispositivo y de la app, un identificador del dispositivo, rendimiento
+  y errores) para el diagnóstico y el análisis del propio servicio,
   según su <a href="https://developers.google.com/ml-kit/android-data-disclosure">declaración
   de datos</a>.</p>
 
@@ -147,7 +147,7 @@
       <tbody>
         <tr><td data-label="Servicio">Ministerio para la Transición Ecológica y el Reto Demográfico
           (<a href="https://geoportalgasolineras.es">Geoportal de gasolineras</a>)</td><td data-label="Función">Precios de carburante</td><td data-label="Información que recibe">La provincia seleccionada.</td></tr>
-        <tr><td data-label="Servicio"><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td data-label="Función">Temperatura y viento en el dashboard</td><td data-label="Información que recibe">Tu posición aproximada (redondeada a alrededor de 1 km), solo mientras usas
+        <tr><td data-label="Servicio"><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td data-label="Función">Temperatura y viento en el dashboard</td><td data-label="Información que recibe">Tu posición, redondeada a alrededor de 1 km, solo mientras usas
           el dashboard. Open-Meteo GmbH (Suiza) indica que conserva sus registros de
           servidor un máximo de 90 días.</td></tr>
         <tr><td data-label="Servicio"><a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap
@@ -195,7 +195,9 @@
   <ul>
     <li>No envía tus datos al desarrollador ni a ningún servidor propio.</li>
     <li>No muestra publicidad ni usa el identificador publicitario del dispositivo.</li>
-    <li>No incluye herramientas de analítica, seguimiento ni elaboración de perfiles.</li>
+    <li>No incluye herramientas de analítica de uso, seguimiento ni elaboración de perfiles.
+    La única información técnica que sale del dispositivo son las métricas de diagnóstico
+    de ML Kit descritas en el apartado 4, que recibe Google y no el desarrollador.</li>
     <li>No vende, alquila ni cede datos a terceros.</li>
     <li>No accede a la ubicación en segundo plano, ni a tu agenda, tus fotos o tus
     archivos más allá de lo que eliges expresamente.</li>
