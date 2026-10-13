@@ -1,19 +1,26 @@
+/* Paleta de la app Mi Garaje (ui/theme/Color.kt): petróleo, ámbar y grises azulados */
 :root {
-  --bg: #fafaf7;
-  --fg: #1d1d1b;
-  --muted: #5c5c57;
-  --accent: #b5491f;
-  --line: #e2e1da;
-  --card: #ffffff;
+  --bg: #EDF0F3;        /* BgLight */
+  --fg: #1B2733;        /* Ink */
+  --muted: #5C6B7A;     /* Subtle */
+  --accent: #14586E;    /* Petrol */
+  --amber: #E8930C;     /* Amber */
+  --line: #D8DEE4;      /* LineGray */
+  --card: #FFFFFF;      /* CardWhite */
+  --head-bg: #14586E;   /* Petrol */
+  --head-fg: #FFFFFF;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #161614;
-    --fg: #ecebe6;
-    --muted: #a3a29b;
-    --accent: #f08a5d;
-    --line: #2f2e2a;
-    --card: #1e1e1b;
+    --bg: #10161C;      /* InkBgDark */
+    --fg: #E2E8ED;      /* OnDark */
+    --muted: #9AA6B1;   /* SubtleLight */
+    --accent: #6FB1C7;  /* PetrolLight */
+    --amber: #F0A93C;
+    --line: #33404D;    /* LineDark */
+    --card: #1B2733;    /* SurfaceDark */
+    --head-bg: #0E3D4D;
+    --head-fg: #E2E8ED;
   }
 }
 * { box-sizing: border-box; }
@@ -34,7 +41,7 @@ a { color: var(--accent); }
 .resumen {
   background: var(--card);
   border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--amber);
   border-radius: 8px;
   padding: 12px 18px;
   margin: 1.5em 0;
@@ -49,3 +56,21 @@ th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom
 th { font-weight: 600; background: var(--card); }
 dl dt { font-weight: 600; margin-top: 0.8em; }
 dl dd { margin: 0.2em 0 0 0; }
+header.barra { background: var(--head-bg); color: var(--head-fg); }
+header.barra div { max-width: 720px; margin: 0 auto; padding: 14px 16px; font-weight: 600; letter-spacing: 0.01em; }
+header.barra a { color: inherit; text-decoration: none; }
+header.barra span { color: var(--amber); }
+/* Enlaces y permisos largos (myaccount.google.com/permissions, calendar.app.created) no
+   deben ensanchar la página en el móvil */
+a, code { overflow-wrap: anywhere; }
+p, li, td, dd { overflow-wrap: break-word; }
+html, body { overflow-x: hidden; }
+/* En el móvil, cada fila de tabla es una ficha: dato debajo de su etiqueta */
+@media (max-width: 560px) {
+  table, tbody, tr, td { display: block; width: 100%; }
+  thead { display: none; }
+  tr { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; }
+  td { border: 0; padding: 2px 0 8px; }
+  td:first-child { font-weight: 600; padding-bottom: 6px; }
+  td:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.8rem; color: var(--muted); }
+}
