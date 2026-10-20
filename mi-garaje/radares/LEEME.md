@@ -7,7 +7,7 @@ Generada el 2026-10-20 por `scripts/build-radars.sh` (historia 191).
 | DGT | 2025-12-18 | 690 | CC BY |
 | Servei Català de Trànsit | 2026-09-17 | 202 | Generalitat de Catalunya |
 | OpenStreetMap | 2026-10-19 | 1751 | ODbL |
-| CartoCiudad (IGN) | 2026-10-20 | 574 | CC BY 4.0 |
+| CartoCiudad (IGN) | 2026-10-20 | 572 | CC BY 4.0 |
 
 Contiene datos de © colaboradores de OpenStreetMap, disponibles con licencia
 Open Database License (ODbL): https://www.openstreetmap.org/copyright.
