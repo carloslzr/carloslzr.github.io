@@ -1,6 +1,6 @@
 # Base de radares de Mi Garaje
 
-Generada el 2026-10-20 por `scripts/build-radars.sh` (historias 191 y 192):
+Generada el 2026-10-21 por `scripts/build-radars.sh` (historias 191 y 192):
 2632 radares fijos y 307 tramos de velocidad media.
 
 | Fuente | Fecha | Radares | Tramos | Licencia |
@@ -8,7 +8,7 @@ Generada el 2026-10-20 por `scripts/build-radars.sh` (historias 191 y 192):
 | DGT | 2025-12-18 | 690 | 45 | CC BY |
 | Servei Català de Trànsit | 2026-09-17 | 202 | 38 | Generalitat de Catalunya |
 | OpenStreetMap | 2026-10-20 | 1740 | 262 | ODbL |
-| CartoCiudad (IGN) | 2026-10-20 | 571 | — | CC BY 4.0 |
+| CartoCiudad (IGN) | 2026-10-21 | 571 | — | CC BY 4.0 |
 
 Contiene datos de © colaboradores de OpenStreetMap, disponibles con licencia
 Open Database License (ODbL): https://www.openstreetmap.org/copyright.
