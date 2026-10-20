@@ -4,36 +4,68 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Base de radares · Mi Garaje</title>
-  <meta name="description" content="Base de radares fijos y tramos de velocidad media de la app Mi Garaje.">
+  <meta name="description" content="Radares fijos y tramos de velocidad media de España que usa la app Mi Garaje: 2.632 radares y 307 tramos, de fuentes abiertas, con licencia ODbL.">
   <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
 <header class="barra"><div><a href="/"><span>●</span> Mi Garaje</a></div></header>
 <main>
-  <h1>Base de radares de Mi Garaje</h1>
-  <p class="sub">Actualizada el 2026-10-21 · 2632 radares fijos y 307 tramos de velocidad media</p>
-  <p>Es la base que usa la app para avisar de los radares fijos y de los tramos de velocidad media
-  mientras se graba una ruta. Se genera a partir de datos abiertos y se publica aquí completa,
-  como exige su licencia.</p>
-  <p><a href="radars.json" download>Descargar la base (radars.json)</a></p>
+  <h1>Base de radares</h1>
+  <p class="sub">La que usa Mi Garaje para avisarte mientras grabas una ruta · actualizada el 21 oct 2026</p>
+
+  <div class="cifras">
+    <div><strong>2.632</strong><span>radares fijos</span></div>
+    <div><strong>307</strong><span>tramos de velocidad media</span></div>
+    <div><strong>4</strong><span>fuentes abiertas</span></div>
+  </div>
+
+  <p>Reúne los radares fijos y los tramos de velocidad media de España a partir de datos públicos
+  de la DGT, del Servei Català de Trànsit y de OpenStreetMap, y los completa con el sentido que
+  controla cada radar (2.070 de 2.632) y su límite (2.438). Se
+  regenera con cada versión de la app y se publica aquí entera, como exige su licencia.</p>
+
+  <p><a class="boton" href="radars.json" download>Descargar la base</a>
+  <span class="nota">radars.json · 0,7 MB</span></p>
+
   <h2>Fuentes</h2>
-  <div class="tabla">
+  <div class="tabla fuentes">
     <table>
-      <tr><th>Fuente</th><th>Fecha</th><th>Radares</th><th>Tramos</th><th>Licencia</th></tr>
-      <tr><td>DGT</td><td>2025-12-18</td><td>690</td><td>45</td><td>CC BY</td></tr>
-      <tr><td>Servei Català de Trànsit</td><td>2026-09-17</td><td>202</td><td>38</td><td>Generalitat de Catalunya</td></tr>
-      <tr><td>OpenStreetMap</td><td>2026-10-20</td><td>1740</td><td>262</td><td>ODbL</td></tr>
-      <tr><td>CartoCiudad (IGN)</td><td>2026-10-21</td><td>571</td><td>—</td><td>CC BY 4.0</td></tr>
+      <thead><tr><th>Fuente</th><th>Datos del</th><th>Radares</th><th>Tramos</th><th>Licencia</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Fuente">DGT</td><td data-label="Datos del">18 dic 2025</td><td data-label="Radares">690</td><td data-label="Tramos">45</td><td data-label="Licencia">CC BY</td></tr>
+        <tr><td data-label="Fuente">Servei Català de Trànsit</td><td data-label="Datos del">17 sept 2026</td><td data-label="Radares">202</td><td data-label="Tramos">38</td><td data-label="Licencia">Generalitat de Catalunya</td></tr>
+        <tr><td data-label="Fuente">OpenStreetMap</td><td data-label="Datos del">20 oct 2026</td><td data-label="Radares">1.740</td><td data-label="Tramos">262</td><td data-label="Licencia">ODbL</td></tr>
+        <tr><td data-label="Fuente">CartoCiudad (IGN)</td><td data-label="Datos del">21 oct 2026</td><td data-label="Radares">Sentido de 571</td><td data-label="Tramos">—</td><td data-label="Licencia">CC BY 4.0</td></tr>
+      </tbody>
     </table>
   </div>
+  <p class="nota">CartoCiudad (IGN) no aporta radares: sus puntos kilométricos orientan el sentido de los de la DGT.</p>
+
+  <h2>Qué trae cada radar</h2>
+  <dl>
+    <dt>Posición y carretera</dt>
+    <dd>Coordenadas, carretera y punto kilométrico, y el nombre de la carretera o de la calle cuando se conoce.</dd>
+    <dt>Sentido</dt>
+    <dd>El rumbo de los vehículos que controla. Si las fuentes no lo dan o se contradicen, no se pone y la app avisa en los dos sentidos.</dd>
+    <dt>Límite</dt>
+    <dd>El de la señal junto al radar. Si las fuentes dan valores distintos se toma el menor y se marca como aproximado.</dd>
+    <dt>Tramos de velocidad media</dt>
+    <dd>Inicio y fin, longitud, sentido y límite del tramo.</dd>
+  </dl>
+
   <h2>Licencia</h2>
   <p>Contiene datos de © colaboradores de OpenStreetMap, disponibles con licencia
   <a href="https://www.openstreetmap.org/copyright">Open Database License (ODbL)</a>.
   Esta base es una obra derivada y se publica con la misma licencia ODbL.</p>
-  <p>Datos de la Dirección General de Tráfico (NAP, CC BY), del Servei Català de Trànsit
-  (Generalitat de Catalunya) y de CartoCiudad (© Instituto Geográfico Nacional, CC BY 4.0), este
-  último solo para orientar el sentido de cada radar.</p>
-  <p class="sub">Orientativa: puede no estar al día. Manda siempre la señalización.</p>
+  <p>Incluye datos de la Dirección General de Tráfico (Punto de Acceso Nacional, CC BY), del
+  Servei Català de Trànsit (Generalitat de Catalunya) y de CartoCiudad (© Instituto Geográfico
+  Nacional, CC BY 4.0).</p>
+
+  <div class="resumen"><p><strong>Orientativa.</strong> Puede no estar al día y no distingue
+  vías paralelas. Manda siempre la señalización.</p></div>
+
+  <footer>Mi Garaje · <a href="/">Inicio</a> · <a href="/mi-garaje/privacidad/">Privacidad</a> ·
+  <a href="mailto:migaraje.app@gmail.com">Contacto</a></footer>
 </main>
 </body>
 </html>
