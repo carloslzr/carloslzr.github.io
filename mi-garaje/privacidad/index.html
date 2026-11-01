@@ -11,7 +11,7 @@
 <header class="barra"><div><a href="/"><span>●</span> Mi Garaje</a></div></header>
 <main>
   <h1>Política de privacidad de Mi Garaje</h1>
-  <p class="sub">Versión 1.2 · En vigor desde el 14 de octubre de 2026</p>
+  <p class="sub">Versión 1.3 · En vigor desde el 1 de noviembre de 2026</p>
 
   <div class="resumen">
     <p><strong>Resumen.</strong> Mi Garaje está diseñada para que tus datos no salgan de
@@ -102,8 +102,10 @@
       <tbody>
         <tr><td data-label="Permiso">Ubicación precisa y aproximada</td><td data-label="Finalidad">Grabar rutas (con una notificación visible durante toda la grabación),
           mostrar velocidad, rumbo y tiempo en el panel de conducción y ordenar las
-          gasolineras por cercanía.</td><td data-label="¿Sale información del dispositivo?">Solo la posición, redondeada a alrededor de 1 km, que se envía a Open-Meteo
-          para consultar el tiempo (apartado 5). Para las rutas y el panel, la posición sale directamente del GPS del
+          gasolineras por cercanía.</td><td data-label="¿Sale información del dispositivo?">La posición, redondeada a alrededor de 1 km, que se envía a Open-Meteo
+          para consultar el tiempo; y, al buscar gasolineras por cercanía, tu posición al
+          servicio de geocodificación del sistema y la provincia al Ministerio (apartado 5).
+          Para las rutas y el panel, la posición sale directamente del GPS del
           móvil; para las gasolineras cercanas, de los servicios de ubicación de Google Play,
           según la configuración de ubicación de tu dispositivo. La app no usa el permiso de
           ubicación en segundo plano.</td></tr>
@@ -148,7 +150,11 @@
       <thead><tr><th>Servicio</th><th>Función</th><th>Información que recibe</th></tr></thead>
       <tbody>
         <tr><td data-label="Servicio">Ministerio para la Transición Ecológica y el Reto Demográfico
-          (<a href="https://geoportalgasolineras.es">Geoportal de gasolineras</a>)</td><td data-label="Función">Precios de carburante</td><td data-label="Información que recibe">La provincia seleccionada.</td></tr>
+          (<a href="https://geoportalgasolineras.es">Geoportal de gasolineras</a>)</td><td data-label="Función">Precios de carburante</td><td data-label="Información que recibe">La provincia que eliges o, si buscas gasolineras por
+          cercanía, las provincias de esa zona, deducidas de tu posición. Nunca recibe tus
+          coordenadas.</td></tr>
+        <tr><td data-label="Servicio"><a href="https://policies.google.com/privacy?hl=es">Geocodificación del sistema</a></td><td data-label="Función">Saber en qué provincia estás al buscar gasolineras por cercanía</td><td data-label="Información que recibe">Tu posición en ese momento, solo cuando lo pides. En
+          Android suele prestar este servicio Google, según la configuración de tu dispositivo.</td></tr>
         <tr><td data-label="Servicio"><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td data-label="Función">Temperatura y viento en el panel</td><td data-label="Información que recibe">Tu posición, redondeada a alrededor de 1 km, solo mientras usas
           el panel. Open-Meteo GmbH (Suiza) indica que conserva sus registros de
           servidor un máximo de 90 días.</td></tr>
