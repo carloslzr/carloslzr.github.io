@@ -77,13 +77,17 @@
         <tr><td data-label="Categoría">Vehículos</td><td data-label="Ejemplos">Nombre, tipo, marca y modelo, matrícula, número de
           bastidor, fechas de compra y matriculación, datos técnicos (cilindrada,
           potencia, depósito, neumáticos, aceite)</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
-        <tr><td data-label="Categoría">Registros de uso</td><td data-label="Ejemplos">Repostajes, mantenimientos, lecturas de
-          kilómetros, importes, reglas de aviso</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
+        <tr><td data-label="Categoría">Registros de uso</td><td data-label="Ejemplos">Repostajes (con la provincia en que se hicieron),
+          mantenimientos, lecturas de kilómetros, importes, reglas de aviso</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
+        <tr><td data-label="Categoría">Gasolineras favoritas</td><td data-label="Ejemplos">Las estaciones que marcas como favoritas: su
+          identificador público, rótulo, dirección y coordenadas</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
         <tr><td data-label="Categoría">Rutas</td><td data-label="Ejemplos">Trazas GPS, fecha, distancia, velocidad, desnivel, notas</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
         <tr><td data-label="Categoría">Contactos para llamadas por voz</td><td data-label="Ejemplos">Nombre y número de los contactos
           que eliges expresamente</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
-        <tr><td data-label="Categoría">Preferencias</td><td data-label="Ejemplos">Provincia y combustible, ajustes de voz y de
-          avisos</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
+        <tr><td data-label="Categoría">Preferencias</td><td data-label="Ejemplos">Provincia y combustible, filtros de gasolineras,
+          ajustes de voz y de avisos, y si has aceptado la lectura de tickets</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
+        <tr><td data-label="Categoría">Información pública guardada</td><td data-label="Ejemplos">Precios de carburante descargados y
+          medias provinciales de días pasados, para no volver a pedirlos</td><td data-label="Dónde se guarda">En el dispositivo</td></tr>
       </tbody>
     </table>
   </div>
@@ -91,7 +95,9 @@
   calcular consumos, costes y estadísticas, mostrar avisos de mantenimiento e ITV,
   representar rutas y generar los informes que solicites.</p>
   <p>Si activas la copia de seguridad en Google Drive (apartado 6), una copia de estos
-  datos se guarda en <strong>tu</strong> cuenta de Google. Si activas Google Calendar,
+  datos, incluidas tus gasolineras favoritas y la provincia de cada repostaje, se guarda en
+  <strong>tu</strong> cuenta de Google. No se copian la información pública guardada ni tu
+  decisión sobre la lectura de tickets, que se te vuelve a pedir en otro dispositivo. Si activas Google Calendar,
   se crean en tu calendario eventos con los próximos vencimientos (tipo de
   mantenimiento, vehículo y fecha).</p>
 
@@ -157,11 +163,14 @@
       <thead><tr><th>Servicio</th><th>Función</th><th>Información que recibe</th></tr></thead>
       <tbody>
         <tr><td data-label="Servicio">Ministerio para la Transición Ecológica y el Reto Demográfico
-          (<a href="https://geoportalgasolineras.es">Geoportal de gasolineras</a>)</td><td data-label="Función">Precios de carburante</td><td data-label="Información que recibe">La provincia que eliges o, si buscas gasolineras por
-          cercanía, las provincias de esa zona, deducidas de tu posición. Nunca recibe tus
-          coordenadas.</td></tr>
-        <tr><td data-label="Servicio"><a href="https://policies.google.com/privacy?hl=es">Geocodificación del sistema</a></td><td data-label="Función">Saber en qué provincia estás al buscar gasolineras por cercanía</td><td data-label="Información que recibe">Tu posición en ese momento, solo cuando lo pides. En
-          Android suele prestar este servicio Google, según la configuración de tu dispositivo.</td></tr>
+          (<a href="https://geoportalgasolineras.es">Geoportal de gasolineras</a>)</td><td data-label="Función">Precios de carburante, su evolución y la comparación de tus repostajes</td><td data-label="Información que recibe">Solo provincias y fechas, nunca tus coordenadas ni tus
+          registros: <br>· al buscar gasolineras, la provincia elegida o las de la zona, que la
+          app deduce en el propio dispositivo a partir de tu posición; <br>· al abrir la ficha
+          de una gasolinera, su provincia y tres fechas pasadas, para mostrar cómo ha
+          evolucionado el precio; <br>· al abrir un repostaje, la provincia y la fecha de ese
+          repostaje, para compararlo con la media de ese día. <br>Esa combinación de provincia y
+          fecha puede indicar dónde estuviste un día concreto; el Ministerio la recibe como
+          cualquier consulta pública a su servicio, sin ningún identificador tuyo.</td></tr>
         <tr><td data-label="Servicio"><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td data-label="Función">Temperatura y viento en el panel</td><td data-label="Información que recibe">Tu posición, redondeada a alrededor de 1 km, solo mientras usas
           el panel. Open-Meteo GmbH (Suiza) indica que conserva sus registros de
           servidor un máximo de 90 días.</td></tr>
@@ -228,7 +237,7 @@
     <table>
       <thead><tr><th>Tratamiento</th><th>Base jurídica</th></tr></thead>
       <tbody>
-        <tr><td data-label="Tratamiento">Funciones que usas: grabar rutas, panel, mapas, tiempo, precios y gasolineras cercanas</td><td data-label="Base jurídica">Prestarte el servicio que solicitas (art. 6.1.b). El permiso de Android
+        <tr><td data-label="Tratamiento">Funciones que usas: grabar rutas, panel, mapas, tiempo, precios, gasolineras cercanas y favoritas, evolución de precios y comparación de tus repostajes</td><td data-label="Base jurídica">Prestarte el servicio que solicitas (art. 6.1.b). El permiso de Android
           es el control técnico con el que decides si esa función accede a tu dispositivo.</td></tr>
         <tr><td data-label="Tratamiento">Funciones opcionales que activas: cuenta de Google, copia en Drive, calendario, voz y acceso a notificaciones</td><td data-label="Base jurídica">Tu consentimiento (art. 6.1.a), que puedes retirar en cualquier momento
           desactivando la función o el permiso, sin que afecte al resto de la app ni a lo
@@ -258,7 +267,10 @@
   <p>Los datos se conservan en tu dispositivo mientras la app esté instalada o hasta que
   los borres. Puedes eliminarlos así:</p>
   <ul>
-    <li><strong>Registros concretos</strong>: desde la propia app.</li>
+    <li><strong>Registros concretos</strong>: desde la propia app, también las
+    gasolineras favoritas (quitando su estrella).</li>
+    <li><strong>Lectura de tickets</strong>: retirando la aceptación en Garaje › Copia y
+    datos.</li>
     <li><strong>Todos los datos del dispositivo</strong>: desinstalando la app o desde
     Ajustes de Android → Aplicaciones → Mi Garaje → Almacenamiento → Borrar datos.</li>
     <li><strong>Copia en Google Drive</strong>: borrando la carpeta «Mi Garaje» de tu
@@ -303,7 +315,11 @@
   página, con su fecha de entrada en vigor. Los cambios relevantes se indicarán también
   en las novedades de la versión correspondiente de la app.</p>
   <p><strong>Historial reciente.</strong> 1.5: las métricas de ML Kit pasan a basarse en tu
-  consentimiento, que se pide antes de leer el primer ticket. 1.4 (1 de noviembre de 2026): base jurídica por
+  consentimiento, que se pide antes de leer el primer ticket; gasolineras favoritas y
+  provincia de los repostajes, también en la copia de Drive; nuevas consultas al Ministerio
+  (evolución de precios y comparación de repostajes, solo con provincia y fecha), y la
+  provincia de las búsquedas por cercanía se calcula ya en el dispositivo, sin servicio de
+  geocodificación. 1.4 (1 de noviembre de 2026): base jurídica por
   tratamiento, mensajes al desarrollador, mapa del panel y plazos. 1.3 (1 de noviembre de
   2026): provincia en las búsquedas por cercanía y geocodificación. 1.2 (14 de octubre de
   2026): nombre de desarrollador en Google Play.</p>
